@@ -1,7 +1,7 @@
 # AppLearn
 This is dummy app to learn various programming concepts
 
-Project Structure: (will keep growing as we learn and add more stuff)
+# Project Structure: (will keep growing as we learn and add more stuff)
  app.py - main py file, where the application begins, routes are added to render html pages
  template - this folder contains all the html pages
  static - this folder contains all the css and javascript files
@@ -13,7 +13,7 @@ Project Structure: (will keep growing as we learn and add more stuff)
 # Installation and Running the Application
 
 # Step1:
-Clone this git repo
+Clone this git repo (git clone https://github.com/roaib43/AppLearn.git)
 
 # Step2:
 In the project directory create a python3 virtual env 
