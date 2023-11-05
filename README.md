@@ -1,10 +1,11 @@
 # AppLearn
 This is dummy app to learn various programming concepts
 
-# Project Structure: (will keep growing as we learn and add more stuff)
- app.py - main py file, where the application begins, routes are added to render html pages
- template - this folder contains all the html pages
- static - this folder contains all the css and javascript files
+# Project Structure: 
+To keep growing as we learn and add more stuff
+ - app.py: main py file, where the application begins, routes are added to render html pages
+ - template: this folder contains all the html pages
+ - static: this folder contains all the css and javascript files
 
  # Prerequisite
  - Python 3
