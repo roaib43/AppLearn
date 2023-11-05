@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block header %}
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Purpose of the App</h1>
+    <p>This is dummy app to learn various programming concepts, the concepts we can learn are listed below</p>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h2>Areas of Focus</h2>
+  <div class="list-group">
+    <a href="https://flask.palletsprojects.com/en/3.0.x/tutorial/" class="list-group-item active">
+      <h4 class="list-group-item-heading">Flask - Python</h4>
+      <p class="list-group-item-text">We will use Flask - python based web development framework, this will be used to develop the frontend of the application. Within the framework, we will ust HTML, CSS, Bootstrap, Javascript</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">Backend Development Concepts - Python</h4>
+      <p class="list-group-item-text">We will try to implement basic concepts of backend within the Flask app such as login and register using SQlite, eventually we will develop microservices to handle backend </p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">Automate Testing of this Application</h4>
+      <p class="list-group-item-text">Using Python as programming language we will be use various automation framwork such as Playwrigh, Pytest, Selenium, WebDriverIO, Robor, the aim to develop full fledge automation framework that supports parallel execution</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">CI/CD</h4>
+      <p class="list-group-item-text">We will learn jenkins and deploy, test the app. Jenkins can we used to automate the process of deploying the app and testing the app by running automated tests after every commit to release branch</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">AWS</h4>
+      <p class="list-group-item-text">And Yes! We will host our app on AWS to learn the concepts like S3, Elastic Computing, load balancing and so on!!</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">Git! Hell Yes!</h4>
+      <p class="list-group-item-text">If you are going to be part of this learning curve, knowing GIT is the MUST and expect atleat one commit, adding any feature to this app atleast once a week</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">ADD MORE</h4>
+      <p class="list-group-item-text">Feel free to add in more areas that would be worth learning</p>
+    </a>
+  </div>
+</div>
+{% endblock %}
