@@ -38,3 +38,7 @@ Once the virtual env is activated, navigate back to project folder and install r
 Run the application (Flask run)
 ![image](https://github.com/roaib43/AppLearn/assets/26030123/08f66802-0615-45f6-be01-af4ee5a34b25)
 
+# Application Overview
+![image](https://github.com/roaib43/AppLearn/assets/26030123/2afa93b4-bb66-41c8-af56-a73aba317608)
+
+
