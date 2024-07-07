@@ -1,12 +1,18 @@
+import json
 import requests as requests
 
+def fetch_ApiKey():
+    with open('config/config.json', 'r') as f:
+        data = json.load(f)
+        return data['imdbApikey']
 
 def search_movie_api(movie_title):
     url = f"https://api.themoviedb.org/3/search/movie?query={movie_title}&include_adult=false&language=en-US&page=1"
 
+    auth = f"Bearer {fetch_ApiKey()}"
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZDQ5ZjA4NDJjYTQxYTNhZTk1N2YyNGMwNGFjMWE0NSIsIm5iZiI6MTcyMDMwODA0OS40MTMyODQsInN1YiI6IjY2NjYxOTAwOTY0ZTI5NzZhMmE2N2MwYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yey2D1hBmGMBs08hbAVmHYq0YHx-u314A9lL946Bcss"
+        "Authorization": auth
     }
 
     try:

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block header %}
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Movie Search</h1>
+    <p>Search for a movie, by movie name, results are fetched from TMDB</p>
+      <div class="col-8">
+          <form method="post" action="/search_movie">
+            <input class="form-control form-control-lg form-control-borderless" name="movie_title" type="search" placeholder="Search movie with movie title">
+            <br/>
+            <button class="btn btn-lg btn-success pull-right" type="submit">Search Movie!</button>
+          </form>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+{% if movie_found %}
+    <ul style="list-style: none;">
+        {% for movie in movie_list %}
+            <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 img">
+                        {% if movie.backdrop_path %}
+                            <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{ movie.backdrop_path }}"  alt="" class="img-rounded">
+                        {% else %}
+                            <img src="https://www.bricosmart.ma/img/ll_prod.png"  alt="" class="img-rounded">
+                        {% endif %}
+
+                    </div>
+                    <div class="col-md-4 details">
+                      <blockquote>
+                        <h5>{{ movie.title }}</h5>
+                        <small><cite title="Source Title">{{ movie.original_title }}  <i class="icon-map-marker"></i></cite></small>
+                      </blockquote>
+                      <p>
+                        {{ movie.overview }} <br>
+                        {{ movie.release_date }}
+                      </p>
+                    </div>
+                  </div>
+                    <hr>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p class="text-center">No movies found, Enter movie name and click on Search</p>
+{% endif %}
+{% endblock %}
